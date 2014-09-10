@@ -1,4 +1,1 @@
-matrix-spark
-============
-
-The smallest number of linearly dependent columns. 
+![](https://github.com/stemblab/matrix-spark/blob/gh-pages/thumb.png)
