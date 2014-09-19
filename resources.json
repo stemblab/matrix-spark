@@ -1,7 +1,10 @@
 [
+    "./m/main-1.txt",
+    "./m/main.m",
     "main.html",
     "main.css",
     "http://puzlet.org/utility/combnk/combnk.coffee",
     "spark.coffee",
-    "main.coffee"
+    "main.coffee",
+    "diary.coffee"
 ]
