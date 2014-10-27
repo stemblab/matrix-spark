@@ -5,8 +5,9 @@
   <div id="left_col">
 
     The [http://en.wikipedia.org/wiki/Spark_(mathematics), spark] of a
-    matrix---useful in [b00cv, compressive sensing]---is the smallest
-    number of
+    matrix---useful in
+    [http://en.wikipedia.org/wiki/Compressed_sensing, compressive
+    sensing]---is the smallest number of
     [http://en.wikipedia.org/wiki/Linear_independence,linearly
     dependent] columns. For example, if some linear combination of
     three columns sums to zero, but no combination of two columns sums
@@ -22,24 +23,25 @@
 
   <div id="right_col">
  
-    The code below <span class="pz_text" ref="rank_note">checks the
+    The code below checks the
     [http://en.wikipedia.org/wiki/Rank_(linear_algebra),rank] for
-    combinations of $k$ columns</span>, for increasing $k$.  If a
-    combination is found with rank less than $k$, then $k$ is the
-    spark. E.g., let $$ A=\begin{bmatrix} 1&0&1&1\\0&1&1&-1
-    \end{bmatrix} $$ It is easy to check that no two columns of $A$
-    are linearly dependent. Since we can find <span class="pz_text"
-    ref="three_col_note">three columns that sum to zero</span> the
-    spark is three (<span class="pz_text" ref="max_note">the
-    maximum</span>).
+    combinations of $k$ columns, for increasing $k$.  If a combination
+    is found with rank less than $k$, then $k$ is the spark. E.g., let
+    $$ A=\begin{bmatrix} 1&0&1&1\\0&1&1&-1 \end{bmatrix} $$ It is easy
+    to check that no two columns of $A$ are linearly dependent. Since
+    we can find <span class="pz_text" ref="three_col_note">three
+    columns that sum to zero</span> the spark is three
+    (<span class="pz_text" ref="max_note">the maximum</span>).
+
+    <h3>Code</h3>
+
+    The CoffeeScript can be edited and computes in the browser. The
+    Octave/Matlab code can be executed locally after cloning /
+    downloading [https://github.com/stemblab/matrix-spark, this
+    repository] (see the m/ directory).
 
     <div class="pz_note" id="three_col_note">
       E.g., add the first two columns and subtract the third.
-    </div>
-
-    <div class="pz_note" id="rank_note">
-      It actually counts the non-zero singular values. E.g., two non-zero
-      singular values means the rank is two.
     </div>
 
     <div class="pz_note" id="max_note">
@@ -52,7 +54,13 @@
 
   <div id="clear"></div>
 
-  <h3>CoffeeScript</h3>
+  <h4>CoffeeScript</h4>
+
+  File: spark.coffee.
+
+  <div data-file="spark.coffee"></div>
+
+  Edit here; shift+enter to compute.
 
   <div class="left_col">
     <div data-file="main.coffee"></div>
@@ -62,7 +70,15 @@
     <div data-eval="main.coffee"></div>
   </div>
 
-  <h3>Octave</h3>
+  <div class="clear"></div>
+
+  <h4>Octave</h4>
+
+  File: spark.m
+
+  <div data-file="./m/spark.m"></div>
+
+  When downloaded and run locally, the above function can be used as follows:
 
   <div data-file="./m/main.m"></div>
 
