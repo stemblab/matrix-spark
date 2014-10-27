@@ -1,4 +1,4 @@
-combnk = $blab.combnk
+combnk = $blab.combnk # <a href="http://puzlet.org/utility/combnk/">Imported function.</a>
 
 $blab.spark = (A) ->
     At = A.T # easier to consider rows of $A^T$ than cols of $A$
@@ -13,6 +13,3 @@ $blab.spark = (A) ->
             rank = (sv for sv in (nm.svd R.T).S when sv>0).length
             return k if rank < k
     N+1 # max spark, if loop doesn't return
-
-
-
